@@ -11,48 +11,63 @@ import Contador from "./componentes/Contador";
 import DigiteSeuNome from "./componentes/DigiteSeuNome";
 import DimensoesFixas from "./componentes/DimensoesFixas";
 import Mega from "./componentes/MegaSena/Mega";
-
 import Calculadora from "./componentes/Calculadora/Calculadora" 
 
-export default class App extends Component{
+import { NavigationContainer } from "@react-navigation/native";
+import { MainStackNavigator } from "./componentes/Menu/StackNavigator";
+import BottomTabNavigator from "./componentes/Menu/TabNavigator";
+
+export default class App extends Component {
   render() {
-    return (
-        
-        <View style={estilos.container}>
-         
-          {/*<Simples texto='Matheus'/> 
-          {/*<Frag titulo="Cadastro" 
-                subTitulo="Tela de Cadastro de Produto" /> 
-            {/*<ParImpar numero={13}/>
-            
-            {/*<Familia>
-                <Membro nome="Ana" sobreNome="Silva" />
-                <Membro nome="José" sobreNome="Silva" />
-              </Familia>*
-
-          <UsuarioLogado usuario={ {nome:'teste', email:'teste@teste.com'} }/>
-          <UsuarioLogado usuario={ {nome:'teste 2' } }/>
-          <UsuarioLogado usuario={ {email:'teste@teste.com' } }/>
-          <UsuarioLogado usuario={ null }/>
-          <UsuarioLogado usuario={ {} }/>
-
-          <Botao/>
-
-          <Contador valorInical={50} />
-
-              <DigiteSeuNome />
-          <DimensoesFixas />
-
-          <Mega qtdeNumeros={7} />
-
-        </View>*/}
-
-        <Calculadora />
-
-</View>
-    );        
+    return(
+      <NavigationContainer>
+        <BottomTabNavigator />
+      </NavigationContainer>
+    );
   }
 }
+
+
+
+//export default class App extends Component{
+  //render() {
+    //return (
+        //
+      //  <View style={estilos.container}>
+         
+          //<Simples texto='Matheus'/> 
+          //<Frag titulo="Cadastro" 
+           //     subTitulo="Tela de Cadastro de Produto" /> 
+            //<ParImpar numero={13}/>
+            //
+            //<Familia>
+              //  <Membro nome="Ana" sobreNome="Silva" />
+               // <Membro nome="José" sobreNome="Silva" />
+              //</Familia>*
+
+          //<UsuarioLogado usuario={ {nome:'teste', email:'teste@teste.com'} }/>
+         // <UsuarioLogado usuario={ {nome:'teste 2' } }/>
+          //<UsuarioLogado usuario={ {email:'teste@teste.com' } }/>
+          //<UsuarioLogado usuario={ null }/>
+          //<UsuarioLogado usuario={ {} }/>
+//
+  //        <Botao/>
+//
+  //        <Contador valorInical={50} />
+//
+  //            <DigiteSeuNome />
+    //      <DimensoesFixas />
+//
+  //        <Mega qtdeNumeros={7} />
+//
+  //      </View>*/}
+//
+  //      <Calculadora />
+//
+//</View>
+  //  );        
+  //}
+//}
 const estilos = StyleSheet.create({
   container:{
     flex: 1,
