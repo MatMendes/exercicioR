@@ -26,7 +26,7 @@ const HomeScream = ({ navigation }) => {
             />
 
             <Button 
-                title="Ir para Tela Calculadora"
+                title="Ir para Calculadora"
                 onPress={() => navigation.navigate("Calculadora")}
             
             />
